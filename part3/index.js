@@ -4,10 +4,11 @@
 const express = require('express');
 const morgan = require('morgan'); //importing express, which this time is a function that is used to create an Express application stored in the app variable:
 const cors = require('cors')
-app.use(cors())
+
 const app = express();
 // Middleware to parse JSON bodies
 app.use(express.json())
+app.use(cors())
 const generateId = () => {
   return Math.floor(Math.random() * 1000000)
 }
